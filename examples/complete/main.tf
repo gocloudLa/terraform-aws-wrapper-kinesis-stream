@@ -6,8 +6,8 @@ module "wrapper_kinesis_stream" {
   kinesis_stream_parameters = {
 
     "provisioned" = {
-      stream_mode      = "PROVISIONED"
-      shard_count      = 2
+      stream_mode = "PROVISIONED"
+      shard_count = 2
 
       # Policy to create cross-account access
       # create_policy = true # Default false

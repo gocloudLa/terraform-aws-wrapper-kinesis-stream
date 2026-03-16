@@ -11,7 +11,7 @@ module "kinesis_stream" {
   max_record_size_in_kib    = try(each.value.max_record_size_in_kib, var.kinesis_stream_defaults.max_record_size_in_kib, 1024)
   retention_period          = try(each.value.retention_period, var.kinesis_stream_defaults.retention_period, 24)
   shard_count               = try(each.value.shard_count, var.kinesis_stream_defaults.shard_count, null)
-  shard_level_metrics       = try(each.value.shard_level_metrics, var.kinesis_stream_defaults.shard_level_metrics, [
+  shard_level_metrics = try(each.value.shard_level_metrics, var.kinesis_stream_defaults.shard_level_metrics, [
     "IncomingBytes",
     "OutgoingBytes"
   ])
