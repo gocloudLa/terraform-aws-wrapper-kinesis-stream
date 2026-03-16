@@ -1,18 +1,21 @@
-# Complete Example 🚀
+# Amazon Kinesis Stream Module 🚀
 
-This example demonstrates a Terraform configuration for setting up notification parameters using a module.
+This example demonstrates a Terraform configuration for provisioning and managing Amazon Kinesis Data Streams using a reusable module.
 
 ## 🔧 What's Included
 
 ### Analysis of Terraform Configuration
 
 #### Main Purpose
-The main purpose is to configure notification parameters for various services such as Discord and Teams.
+The main purpose is to create and configure Kinesis streams.
 
 #### Key Features Demonstrated
-- **Enable Notifications**: Enables or disables the notification system
-- **Discord Webhook Url**: Specifies the webhook URL for Discord notifications
-- **Teams Webhook Url**: Specifies the webhook URL for Microsoft Teams notifications
+- **Stream Creation**: Provisions Kinesis streams with configurable shard count, retention period, and stream mode (PROVISIONED or ON_DEMAND)
+- **Enhanced Fan-Out Support**: Optionally creates a stream consumer to enable Enhanced Fan-Out for dedicated throughput per consumer
+- **Encryption Configuration**: Supports KMS encryption for the stream using a specified KMS key
+- **Shard Metrics Configuration**: Allows enabling shard-level metrics such as IncomingBytes and OutgoingBytes
+- **Retention Management**: Configures how long data records remain available in the stream
+- **Cross-Account Access Policy**: Optionally creates a resource policy to allow another AWS account to write or read from the stream
 
 ## 🚀 Quick Start
 
