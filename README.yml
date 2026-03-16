@@ -1,4 +1,4 @@
-module_name: Terraform AWS Batch Job Module
+module_name: Terraform AWS Kinesis Stream Module
 module_description: The AWS Kinesis Stream Terraform Wrapper defines the configuration required to provision and manage Amazon Kinesis Data Streams.
 module_badges:
   - url: "https://github.com/gocloudLa/terraform-aws-wrapper-kinesis-stream/releases/latest"
