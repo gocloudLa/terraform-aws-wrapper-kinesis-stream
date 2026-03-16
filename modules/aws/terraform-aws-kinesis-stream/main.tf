@@ -7,12 +7,8 @@ resource "aws_kinesis_stream" "this" {
   encryption_type           = var.encryption_type
   kms_key_id                = var.kms_key_id
   max_record_size_in_kib    = var.max_record_size_in_kib
-
-  dynamic "stream_mode_details" {
-    for_each = var.stream_mode != null ? ["true"] : []
-    content {
-      stream_mode = var.stream_mode
-    }
+  stream_mode_details {
+    stream_mode = var.stream_mode
   }
 
   tags = var.tags
