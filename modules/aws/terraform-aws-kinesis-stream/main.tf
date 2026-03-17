@@ -15,7 +15,7 @@ resource "aws_kinesis_stream" "this" {
 }
 
 resource "aws_kinesis_stream_consumer" "this" {
-  count = local.enable_enhanced_fan_out ? 1 : 0
+  count = var.enable_enhanced_fan_out ? 1 : 0
 
   name       = var.name
   stream_arn = aws_kinesis_stream.this.arn
@@ -24,7 +24,7 @@ resource "aws_kinesis_stream_consumer" "this" {
 }
 
 resource "aws_kinesis_resource_policy" "this" {
-  count = local.create_policy ? 1 : 0
+  count = var.create_policy ? 1 : 0
 
   policy = jsonencode({
     Version = "2012-10-17",
