@@ -12,7 +12,7 @@ locals {
       region  = "use2"
       env     = "lab"
       project = "example"
-      layer   = "workload"
+      layer   = "project"
     }
   }
 
